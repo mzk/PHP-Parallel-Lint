@@ -55,6 +55,7 @@ class SettingsParseArgumentsTest extends Tester\TestCase
         $expectedSettings->excluded = array('vendor');
         $expectedSettings->colors = Settings::DISABLED;
         $expectedSettings->json = false;
+        $expectedSettings->deprecated = false;
 
         Assert::equal($expectedSettings->phpExecutable, $settings->phpExecutable);
         Assert::equal($expectedSettings->shortTag, $settings->shortTag);
@@ -65,6 +66,7 @@ class SettingsParseArgumentsTest extends Tester\TestCase
         Assert::equal($expectedSettings->excluded, $settings->excluded);
         Assert::equal($expectedSettings->colors, $settings->colors);
         Assert::equal($expectedSettings->json, $settings->json);
+        Assert::equal($expectedSettings->showDeprecated, $settings->showDeprecated);
     }
 
     public function testColorsForced()

@@ -118,6 +118,11 @@ class Settings
     public $ignoreFails = false;
 
     /**
+     * @var bool
+     */
+    public $showDeprecated = false;
+
+    /**
      * @param array $paths
      */
     public function addPaths(array $paths)
@@ -192,6 +197,10 @@ class Settings
 
                     case '--ignore-fails':
                         $settings->ignoreFails = true;
+                        break;
+
+                    case '--show-deprecated':
+                        $settings->showDeprecated = true;
                         break;
 
                     default:
